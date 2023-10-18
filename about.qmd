@@ -2,7 +2,7 @@
 title: "About"
 ---
 
-About this site
+I'm a third-year undergraduate student at the National University of Singapore pursuing a double major in Data Science and Analytics, and Economics. I enjoy experimenting with Audio Signal Processing, Computer Vision, and Econometric Modelling to develop novel insights. This is what keeps me inspired, an infinite loop of curiosity and passion to build tools that can transform the way we understand and use data to solve some of the most difficult problems of the 21st century.
 
 ```{r}
 1 + 1
