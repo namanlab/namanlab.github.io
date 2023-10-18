@@ -8,6 +8,4 @@ I'M NAMAN AGRAWAL
 
 Data Scientist and Economics Enthusiast
 
-```{r}
-1 + 1
-```
+<iframe src = "https://datadrivensupplychain.shinyapps.io/parkinglot_simulation/" width="1000" height="800"></iframe>
