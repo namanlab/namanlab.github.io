@@ -1,5 +1,5 @@
 ---
-title: "My Website"
+title: "Naman's Website"
 ---
 
 This is a Quarto website.
