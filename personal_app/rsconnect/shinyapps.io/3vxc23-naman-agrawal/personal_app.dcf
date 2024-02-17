@@ -1,0 +1,12 @@
+name: personal_app
+title: personal_app
+username: 3vxc23-naman-agrawal
+account: 3vxc23-naman-agrawal
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11254478
+bundleId: 8266338
+url: https://3vxc23-naman-agrawal.shinyapps.io/personal_app/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

@@ -6,6 +6,6 @@ This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
-```{r}
-1 + 1
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://3vxc23-naman-agrawal.shinyapps.io/personal_app/"></iframe>
 ```
