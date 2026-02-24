@@ -69,8 +69,8 @@
           </a>
         </div>
       </div>
-      <div class="hero-avatar" aria-hidden="true">
-        <i class="fa fa-user"></i>
+      <div class="hero-avatar">
+        <img src="logo.png" alt="Naman Agrawal" />
       </div>
     </div>
 
@@ -118,10 +118,6 @@
           <li>
             <span class="label">Location</span>
             <span>Singapore</span>
-          </li>
-          <li>
-            <span class="label">Referee</span>
-            <span>IEEE CAI 2026</span>
           </li>
         </ul>
       </div>
@@ -504,22 +500,24 @@
     </p>
 
     <div class="teaching-grid">
-      <div class="course-chip">CS3230: Design &amp; Analysis of Algorithms</div>
-      <div class="course-chip">CS2040: Data Structures and Algorithms</div>
-      <div class="course-chip">NM2207: Computational Media Literacy</div>
-      <div class="course-chip">DSA2101: Essential Data Analytics Tools: Data Visualisation</div>
-      <div class="course-chip">CS1010S: Programming Methodology</div>
-      <div class="course-chip">EC2102: Macroeconomics I</div>
-      <div class="course-chip">IT1244: Artificial Intelligence: Technology and Society</div>
-      <div class="course-chip">DSA1101: Introduction to Data Science</div>
+      <a class="course-chip" href="https://nusmods.com/courses/CS3230" target="_blank" rel="noopener">CS3230: Design &amp; Analysis of Algorithms</a>
+      <a class="course-chip" href="https://nusmods.com/courses/CS2040" target="_blank" rel="noopener">CS2040: Data Structures and Algorithms</a>
+      <a class="course-chip" href="https://nusmods.com/courses/NM2207" target="_blank" rel="noopener">NM2207: Computational Media Literacy</a>
+      <a class="course-chip" href="https://nusmods.com/courses/DSA2101" target="_blank" rel="noopener">DSA2101: Essential Data Analytics Tools: Data Visualisation</a>
+      <a class="course-chip" href="https://nusmods.com/courses/CS1010S" target="_blank" rel="noopener">CS1010S: Programming Methodology</a>
+      <a class="course-chip" href="https://nusmods.com/courses/EC2102" target="_blank" rel="noopener">EC2102: Macroeconomics I</a>
+      <a class="course-chip" href="https://nusmods.com/courses/IT1244" target="_blank" rel="noopener">IT1244: Artificial Intelligence: Technology and Society</a>
+      <a class="course-chip" href="https://nusmods.com/courses/DSA1101" target="_blank" rel="noopener">DSA1101: Introduction to Data Science</a>
     </div>
 
-    <p class="teaching-note mt-2">
+    <div class="teaching-note mt-2">
       <strong>Teaching recognition:</strong>
-      Undergraduate Teaching Excellence Award (Department of Economics, 2024 &amp; 2025) ·
-      School of Computing Honour List of Tutors (2024 &amp; 2025) ·
-      Department of Statistics &amp; Data Science Teaching Assistant Award (2024)
-    </p>
+      <ul>
+        <li>Undergraduate Teaching Excellence Award (Department of Economics, 2024 &amp; 2025)</li>
+        <li>School of Computing Honour List of Tutors (2024 &amp; 2025)</li>
+        <li>Department of Statistics &amp; Data Science Teaching Assistant Award (2024)</li>
+      </ul>
+    </div>
 
     <p class="teaching-note mt-1">
       <strong>Workshops organized:</strong> Generative AI for Business ·
@@ -693,30 +691,46 @@
     toggle.setAttribute('aria-expanded', open);
   });
 
-  // Close nav on link click (mobile)
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
+  // Active nav highlighting on scroll — replaced by tab switching below
+
+  // Tab-based section switching
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const allSections = document.querySelectorAll('section[id]');
+
+  function showSection(id) {
+    allSections.forEach(sec => {
+      if (sec.id === 'hero') {
+        sec.style.display = (id === 'about') ? '' : 'none';
+      } else {
+        sec.style.display = (sec.id === id) ? '' : 'none';
+      }
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('nav-active', a.getAttribute('href') === '#' + id);
+    });
+    window.scrollTo(0, 0);
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const id = link.getAttribute('href').slice(1);
+      history.pushState(null, '', '#' + id);
+      showSection(id);
       menu.classList.remove('open');
       toggle.setAttribute('aria-expanded', false);
     });
   });
 
-  // Active nav highlighting on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a');
+  // Show initial section from URL hash or default to 'about'
+  const initialId = window.location.hash.slice(1) || 'about';
+  showSection(initialId);
 
-  function onScroll() {
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 80) current = sec.id;
-    });
-    navLinks.forEach(a => {
-      a.style.color = a.getAttribute('href') === '#' + current
-        ? 'var(--blue)' : '';
-    });
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true });
+  // Handle back/forward browser navigation
+  window.addEventListener('popstate', () => {
+    const id = window.location.hash.slice(1) || 'about';
+    showSection(id);
+  });
 </script>
 
 </body>

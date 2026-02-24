@@ -113,6 +113,7 @@ nav {
 }
 
 .nav-links a:hover { color: var(--blue); }
+.nav-links a.nav-active { color: var(--blue); font-weight: 700; }
 
 /* Hamburger (mobile) */
 .nav-toggle { display: none; cursor: pointer; background: none; border: none; }
@@ -452,6 +453,7 @@ nav {
 }
 
 .course-chip {
+  display: block;
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius);
@@ -459,12 +461,25 @@ nav {
   font-size: .84rem;
   color: var(--gray-700);
   box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: background .15s, color .15s, box-shadow .15s;
+}
+
+.course-chip:hover {
+  background: var(--light);
+  color: var(--blue);
+  box-shadow: 0 2px 12px rgba(0,0,0,.1);
 }
 
 .teaching-note {
   margin-top: 1rem;
   font-size: .88rem;
   color: var(--muted);
+}
+
+.teaching-note ul {
+  margin-top: .4rem;
+  padding-left: 1.2rem;
 }
 
 .award-row {
