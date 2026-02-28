@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Agrawal | Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #4a5568;
+            --accent: #2c5282;
+            --accent-light: #3182ce;
+            --background: #ffffff;
+            --surface: #f8fafc;
+            --border: #e2e8f0;
+            --text: #2d3748;
+            --text-light: #718096;
+            --serif: 'Source Serif 4', Georgia, serif;
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--background);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 0 2rem;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .nav-logo {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            letter-spacing: 0.01em;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 2rem 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero-text h1 {
+            font-family: var(--serif);
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+
+        .affiliation {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .affiliation strong {
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .hero-links {
+            display: flex;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s ease;
+        }
+
+        .hero-links a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        section:nth-child(even) {
+            background: var(--surface);
+            max-width: 100%;
+            padding-left: calc((100% - 900px) / 2 + 2rem);
+            padding-right: calc((100% - 900px) / 2 + 2rem);
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Research Interests */
+        .research-narrative {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+
+        .research-themes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .theme-card {
+            padding: 1.5rem;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .theme-card h4 {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .theme-card p {
+            font-size: 0.925rem;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        /* Publications */
+        .publication {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .pub-venue {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .pub-title {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .pub-title a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .pub-title a:hover {
+            border-bottom-color: var(--accent);
+        }
+
+        .pub-authors {
+            font-size: 0.925rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+
+        .pub-abstract {
+            font-size: 0.925rem;
+            color: var(--text-light);
+            line-height: 1.75;
+        }
+
+        .pub-links {
+            margin-top: 0.75rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .pub-link {
+            font-size: 0.825rem;
+            font-weight: 500;
+            color: var(--accent);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .pub-link:hover {
+            color: var(--accent-light);
+        }
+
+        /* Software */
+        .software-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .software-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .software-name {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .software-name a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .software-name a:hover {
+            color: var(--accent);
+        }
+
+        .software-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+        }
+
+        .software-desc {
+            font-size: 0.925rem;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 2.5rem;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .exp-title {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .exp-date {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .exp-org {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .exp-desc {
+            font-size: 0.925rem;
+            color: var(--secondary);
+            line-height: 1.75;
+        }
+
+        /* Teaching */
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .course-item {
+            padding: 1rem 1.25rem;
+            background: var(--surface);
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .course-code {
+            font-family: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-right: 0.75rem;
+        }
+
+        .course-code a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .course-code a:hover {
+            text-decoration: underline;
+        }
+
+        .course-name {
+            font-size: 0.925rem;
+            color: var(--text);
+            flex: 1;
+        }
+
+        /* Awards */
+        .award-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .award-item:last-child {
+            border-bottom: none;
+        }
+
+        .award-name {
+            font-size: 0.95rem;
+            color: var(--text);
+            flex: 1;
+        }
+
+        .award-year {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .project-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(44, 82, 130, 0.1);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .project-desc {
+            font-size: 0.925rem;
+            color: var(--secondary);
+            line-height: 1.75;
+        }
+
+        /* Education */
+        .education-item {
+            margin-bottom: 2rem;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .edu-degree {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-school {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-details {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            line-height: 1.7;
+        }
+
+        .edu-award {
+            font-size: 0.875rem;
+            color: var(--text);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        /* Contact */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info p {
+            font-size: 0.95rem;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-link {
+            font-size: 0.925rem;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-link:hover {
+            color: var(--accent-light);
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            section:nth-child(even) {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .exp-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .course-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.25rem;
+            }
+        }
+
+        /* Utility */
+        .highlight {
+            color: var(--accent);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Naman Agrawal</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#software">Software</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Naman Agrawal</h1>
+                <p class="tagline">Computational Social Science | Machine Learning | Applied Econometrics</p>
+                <p class="bio">
+                    I am a Predoctoral Researcher at the Department of Economics, National University of Singapore, working with Dr. Ruben Durante and Dr. Xiaoyue Shan. My research lies at the intersection of machine learning, causal inference, and applied economics, with a particular focus on developing computational methods to study political economy, media, and labor markets. I build large-scale datasets using web scraping, natural language processing, and large language models to investigate questions about information environments, political behavior, and economic decision-making. My methodological interests span deep learning, Bayesian statistics, and network analysis, which I apply to problems in computer vision, text analysis, and empirical microeconomics.
+                </p>
+                <p class="affiliation">
+                    <strong>National University of Singapore</strong><br>
+                    B.Sc. (Hons) Data Science and Analytics | B.Soc.Sci. (Hons) Economics
+                </p>
+                <div class="hero-links">
+                    <a href="mailto:naman.a@u.nus.edu">Email</a>
+                    <a href="https://github.com/namanlab" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/naman-agr" target="_blank">LinkedIn</a>
+                    <a href="https://medium.com/@namanagr03" target="_blank">Medium</a>
+                    <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Research Interests -->
+    <section id="research">
+        <h2 class="section-title">Research</h2>
+        <p class="research-narrative">
+            My work is organized around a central question: how can computational methods help us understand complex social and economic phenomena? I approach this through three interconnected research streams that combine methodological innovation with substantive applications.
+        </p>
+        <p class="research-narrative">
+            In <strong>computational social science</strong>, I study how information flows shape political and economic outcomes. This includes analyzing media coverage patterns across countries, detecting political rhetoric using LLM-based classification, and examining how symbolic policies like street naming reflect institutional change. I build custom data infrastructure, often involving automated scraping, NER pipelines, and geospatial matching, to study these questions at scale.
+        </p>
+        <p class="research-narrative">
+            My work in <strong>machine learning and signal processing</strong> focuses on developing architectures that respect the mathematical structure of the data they process. Recent work explores complex-valued neural networks for audio applications, where preserving phase information improves downstream tasks. I have also worked on computer vision systems for video quality assessment and 3D reconstruction using SLAM and neural radiance fields.
+        </p>
+        <p class="research-narrative">
+            In <strong>applied econometrics and market design</strong>, I develop theoretical models and empirical strategies to study markets with information frictions. This includes game-theoretic models of signaling in real estate and data markets, causal analyses of charitable giving behavior, and Bayesian methods for borrowing historical information in clinical trials. I am particularly interested in how economic theory can guide the design of efficient institutions.
+        </p>
+
+        <div class="research-themes">
+            <div class="theme-card">
+                <h4>Computational Social Science</h4>
+                <p>Large-scale text analysis, media studies, political economy, LLM-based classification, geospatial data construction</p>
+            </div>
+            <div class="theme-card">
+                <h4>Machine Learning</h4>
+                <p>Deep learning, complex-valued networks, computer vision, audio signal processing, neural network architectures</p>
+            </div>
+            <div class="theme-card">
+                <h4>Applied Econometrics</h4>
+                <p>Causal inference, Bayesian methods, network analysis, game theory, market design, information economics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+        <h2 class="section-title">Publications</h2>
+
+        <div class="publication">
+            <p class="pub-venue">IEEE Conference on Artificial Intelligence (CAI) 2026</p>
+            <h3 class="pub-title">
+                <a href="https://arxiv.org/pdf/2510.09926" target="_blank">Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications</a>
+            </h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Proposes complex-valued CNN architectures and training adaptations including complex batch normalization, initialization schemes, and various complex activations to exploit phase information typically discarded by real-valued networks. Evaluates across three stages: image baselines, MFCC audio classification, and phase-aware graph neural networks. Results demonstrate that complex architectures match real CNN baselines while offering improved handling of phase in audio pipelines, with analysis of stability-expressivity trade-offs across different complex activation functions.
+            </p>
+            <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2510.09926" class="pub-link" target="_blank">PDF</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <p class="pub-venue">IEEE/ACM LLM4Code Workshop, ICSE 2025</p>
+            <h3 class="pub-title">
+                <a href="https://arxiv.org/pdf/2502.01273" target="_blank">Analysis of Student-LLM Interaction in a Software Engineering Project</a>
+            </h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong>, Ridwan Shariffdeen, Guanlin Wang, Sanka Rasnayaka, and Ganesh N. Iyer</p>
+            <p class="pub-abstract">
+                Tracks 126 undergraduate students over a 13-week semester, analyzing conversational logs, 730 LLM-generated code snippets, and code complexity metrics including lines of code, cyclomatic complexity, control flow graph depth, and Halstead effort. Demonstrates that conversational ChatGPT interactions produce shorter, lower-complexity code compared to Copilot, highlighting how dialogue-based prompting reduces structural complexity while meeting project requirements.
+            </p>
+            <div class="pub-links">
+                <a href="https://arxiv.org/pdf/2502.01273" class="pub-link" target="_blank">PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Papers -->
+    <section>
+        <h2 class="section-title">Working Papers</h2>
+
+        <div class="publication">
+            <h3 class="pub-title">Cultural Flows in the Digital Age: Evidence from YouTube's Global Music Charts</h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Analyzes 1.26 million weekly entries from YouTube Music's Top-100 charts across 60 countries (2021-2025) to map global music circulation patterns. Graph-based clustering reveals three stable listening blocs: a cohesive Latin American community, a broad global mainstream cluster linking Europe and Asian markets, and a distinct East African group. Bilateral similarity regressions confirm shared language as the strongest predictor of musical affinity, with diffusion networks revealing asymmetric export patterns centered on the United States and Mexico as the pivotal conduit for Spanish-language content.
+            </p>
+        </div>
+
+        <div class="publication">
+            <h3 class="pub-title">Seventy-Five Years of the Supreme Court of India: An Empirical Analysis of Judicial Decision-Making, Citation Networks and Institutional Evolution</h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Constructs a novel dataset of 42,833 judgments with structured metadata extracted using large language models, covering party characteristics, legal doctrines, constitutional provisions, precedent citations, bench composition, and case outcomes. Estimates determinants of appellant success using OLS, logit, probit, and high-dimensional fixed effects with causal identification through IV, RDD, and DiD designs. Maps citation networks to identify the 50 most influential precedents and detect doctrinal communities through Louvain clustering.
+            </p>
+        </div>
+
+        <div class="publication">
+            <h3 class="pub-title">Crisis, Compassion, and Capital: The Economics of Global Charitable Giving</h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Examines nearly 50,000 projects across 201 countries representing over $575 million in charitable donations (2002-2025). Uses the Russian invasion of Ukraine as a natural experiment through difference-in-differences and event study designs, finding 300%+ funding increases for Ukraine-related projects with evidence of both additionality and substitution effects. Text analysis reveals that urgency keywords increase funding by 35-40% and life-saving language by 89%, operating primarily through new donor acquisition rather than increased gift sizes.
+            </p>
+        </div>
+
+        <div class="publication">
+            <h3 class="pub-title">
+                <a href="https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5505979" target="_blank">Rigidity as Signal: A Game-Theoretic Explanation for Persistent Vacancies in Urban Real Estate Markets</a>
+            </h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Models vacancy as a deliberate, costly signal in a two-period game with heterogeneous sellers, deriving multiple equilibrium types including pooling-holdout, pooling-discount, and both separating forms. Analyzes comparative statics and demonstrates how targeted policy levers such as vacancy taxes and price-ratio mandates can reshape equilibria toward more informative outcomes and improve allocative efficiency in urban housing markets.
+            </p>
+            <div class="pub-links">
+                <a href="https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5505979" class="pub-link" target="_blank">SSRN</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <h3 class="pub-title">Copula-Based Approaches to Engineering Simpson's Paradox and Applications to Fairness Evaluation</h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong> and Vishesh Gopal</p>
+            <p class="pub-abstract">
+                Presents a reproducible copula-based pipeline using quantile inverse-CDF mapping, targeted copula dependence, assignment optimization, and simulated annealing to create tunable Simpson's paradox datasets for algorithmic fairness benchmarking. Demonstrates that pooled estimators can mask severe subgroup failures, making the method a practical testbed for fairness diagnostics.
+            </p>
+        </div>
+
+        <div class="publication">
+            <h3 class="pub-title">Equilibrium Analysis for Strategic Information Revelation in Data Markets</h3>
+            <p class="pub-authors"><strong>Naman Agrawal</strong></p>
+            <p class="pub-abstract">
+                Develops a tractable signaling model where data sellers choose disclosure levels and buyers update beliefs accordingly. Derives conditions for pooling versus separating equilibria and uses simulations to demonstrate how disclosure costs and prior beliefs shape market vulnerability to adverse selection. Highlights policy implications including standardized disclosure requirements, certification mechanisms, and third-party audits.
+            </p>
+        </div>
+    </section>
+
+    <!-- Software -->
+    <section id="software">
+        <h2 class="section-title">Software</h2>
+
+        <div class="software-item">
+            <p class="software-name"><a href="https://cran.r-project.org/web/packages/covalchemy/index.html" target="_blank">covalchemy</a></p>
+            <p class="software-meta">R Package | CRAN | 2025</p>
+            <p class="software-desc">
+                Tools for constructing multivariate distributions that preserve empirical marginals while allowing precise control over correlation structure, mutual information, and higher-order dependence. Benchmark experiments demonstrate marginal fidelity with less than 1% error while enabling precise manipulation of dependence structures for research applications and statistical pedagogy.
+            </p>
+        </div>
+
+        <div class="software-item">
+            <p class="software-name"><a href="https://cran.r-project.org/web/packages/autoharp/index.html" target="_blank">autoharp</a></p>
+            <p class="software-meta">R Package | CRAN | 2026</p>
+            <p class="software-desc">
+                A customizable toolkit for assessing and grading student R and R Markdown submissions, including automated correctness checks, run-time statistics, and static code analysis. Supports workflow automation for educators with functions to render and evaluate scripts, extract code structure, and generate comprehensive diagnostic reports.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Predoctoral Researcher</span>
+                <span class="exp-date">Aug 2025 - Present</span>
+            </div>
+            <p class="exp-org">Department of Economics, National University of Singapore</p>
+            <p class="exp-desc">
+                Working with Dr. Ruben Durante and Dr. Xiaoyue Shan on computational social science projects. Building large-scale datasets on media coverage, labor markets, and political behavior using automated scraping, LLM-based classification, and geospatial analysis. Designing field experiments and supporting research pipelines for projects studying peer effects, political rhetoric, and symbolic policy.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Research Intern, Statistics</span>
+                <span class="exp-date">May 2024 - Jul 2024</span>
+            </div>
+            <p class="exp-org">Procter & Gamble and Institute of Mathematical Sciences</p>
+            <p class="exp-desc">
+                Developed adaptive algorithms for leveraging historical data in randomized controlled trials to minimize control group sample sizes while maintaining Type I and Type II error control. Optimized Bayesian borrowing techniques including normalized power priors, commensurate priors, elastic priors, and meta-analytic-predictive priors, reducing computational overhead by up to 78%.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Research Intern, Financial Data Science</span>
+                <span class="exp-date">Nov 2022 - Feb 2023; May 2024 - Aug 2024</span>
+            </div>
+            <p class="exp-org">School of Computing, National University of Singapore</p>
+            <p class="exp-desc">
+                Examined alliance networks and their temporal effects on firm profitability using Louvain community detection and network centrality measures. Optimized ensemble techniques and base learners for XGBoost models in financial fraud prediction pipelines, achieving 99% accuracy through rigorous model evaluation.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Research Intern, Computer Vision</span>
+                <span class="exp-date">Jul 2023 - Mar 2024</span>
+            </div>
+            <p class="exp-org">Singapore Bus Services Transit (SBST)</p>
+            <p class="exp-desc">
+                Developed a system for identifying visual impairments in surveillance footage using deep convolutional neural networks, achieving 96% classification accuracy. Implemented Siamese Network architecture with SVD Maps and Fourier Transformation features using OpenCV, TensorFlow, and Keras for robust blur detection across varying video conditions.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Research Intern, 3D Computer Vision</span>
+                <span class="exp-date">May 2023 - Aug 2023</span>
+            </div>
+            <p class="exp-org">Jio AI Centre for Excellence</p>
+            <p class="exp-desc">
+                Researched algorithms for Simultaneous Localization and Mapping (SLAM), including attention-based graph feature matching (SuperGlue), 3D reconstruction with Deep Neural Radiance Fields (NeRF), and monocular depth estimation (ZoeDepth). Experimented with Forward-Forward training and Predictive Coding algorithms, achieving 3x performance improvement through efficient gradient computation.
+            </p>
+        </div>
+
+        <div class="experience-item">
+            <div class="exp-header">
+                <span class="exp-title">Data Analytics and IT Intern</span>
+                <span class="exp-date">May 2022 - Aug 2022</span>
+            </div>
+            <p class="exp-org">A.P. Moller - Maersk (APM Terminals)</p>
+            <p class="exp-desc">
+                Developed an Electronic Virtual Management System for APM Terminals, streamlining logistics, finances, operations, and risk management. Integrated 20+ databases enabling automated report generation, real-time dashboarding, and systematic tracking of operational KPIs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Teaching -->
+    <section id="teaching">
+        <h2 class="section-title">Teaching</h2>
+        <p style="margin-bottom: 1.5rem; color: var(--secondary);">
+            Undergraduate Teaching Assistant, National University of Singapore (Jul 2022 - Jul 2025)
+        </p>
+        <div class="teaching-grid">
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/CS3230" target="_blank">CS3230</a></span>
+                <span class="course-name">Design & Analysis of Algorithms</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/CS2040" target="_blank">CS2040</a></span>
+                <span class="course-name">Data Structures and Algorithms</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/NM2207" target="_blank">NM2207</a></span>
+                <span class="course-name">Computational Media Literacy</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/DSA2101" target="_blank">DSA2101</a></span>
+                <span class="course-name">Essential Data Analytics Tools: Data Visualisation</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/CS1010S" target="_blank">CS1010S</a></span>
+                <span class="course-name">Programming Methodology</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/EC2102" target="_blank">EC2102</a></span>
+                <span class="course-name">Macroeconomics I</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/IT1244" target="_blank">IT1244</a></span>
+                <span class="course-name">Artificial Intelligence: Technology and Society</span>
+            </div>
+            <div class="course-item">
+                <span class="course-code"><a href="https://nusmods.com/courses/DSA1101" target="_blank">DSA1101</a></span>
+                <span class="course-name">Introduction to Data Science</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section>
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-item">
+            <p class="edu-degree">Bachelor of Science (Honours) in Data Science and Analytics</p>
+            <p class="edu-school">National University of Singapore | Aug 2021 - Jul 2025</p>
+            <p class="edu-details">
+                Minor in Computer Science | Specialization in Statistical Methodology | GPA: 4.94/5.00
+            </p>
+            <p class="edu-award">Lijen Industrial Development Medal for Best Honours Thesis</p>
+        </div>
+
+        <div class="education-item">
+            <p class="edu-degree">Bachelor of Social Science (Honours) in Economics</p>
+            <p class="edu-school">National University of Singapore | Aug 2021 - Jul 2025</p>
+            <p class="edu-details">
+                Specialization in Monetary & Financial Economics | GPA: 4.98/5.00
+            </p>
+            <p class="edu-award">Paul Sherwood Memorial Gold Medal for Best Graduate</p>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="awards">
+        <h2 class="section-title">Honors & Awards</h2>
+
+        <div class="award-item">
+            <span class="award-name">Paul Sherwood Memorial Gold Medal (Best Graduate in Economics)</span>
+            <span class="award-year">2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">Lijen Industrial Development Medal (Best Honours Project)</span>
+            <span class="award-year">2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">Sugar Industry of Singapore Prize (Best Performance in Faculty of Science)</span>
+            <span class="award-year">2022</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">NUS Dean's List & Dean's Scholars List</span>
+            <span class="award-year">2022-2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">Undergraduate Teaching Excellence Award, Department of Economics</span>
+            <span class="award-year">2024, 2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">School of Computing Honour List of Tutors</span>
+            <span class="award-year">2024, 2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">Department of Statistics & Data Science Teaching Assistant Award</span>
+            <span class="award-year">2024</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">Top Student Awards: Data Structures & Algorithms, AI, Database Systems</span>
+            <span class="award-year">2023-2025</span>
+        </div>
+        <div class="award-item">
+            <span class="award-name">National Economics Olympiad (SRCC): All India Rank 2</span>
+            <span class="award-year">2020</span>
+        </div>
+    </section>
+
+    <!-- Selected Projects -->
+    <section id="projects">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">TrafficAI: Generative AI for Traffic Management</span>
+                <span class="project-badge">NCS Innovation Challenge Finalist</span>
+            </div>
+            <p class="project-desc">
+                AI-powered traffic control system utilizing Flask API and Gemini to analyze over 1 million daily data points from real-time sensors, traffic cameras, GPS, and social media. Implemented a comprehensive urban mobility approach with an active response system for accidents and disruptions.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">OptPark: NUS Car Park Optimization Software</span>
+            </div>
+            <p class="project-desc">
+                Parking optimization application using R Shiny, advanced discrete event simulation techniques, and statistical modeling. Spearheaded backend development, frontend UI integration, Dockerization, and AWS deployment for real-time management of 7 university car parks.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Grab-Posisi Geospatial Analysis</span>
+            </div>
+            <p class="project-desc">
+                Analyzed 80 million GPS pings from the Grab-Posisi dataset using Geopandas and Folium. Performed targeted speed analysis to identify traffic bottlenecks and investigated the influence of taxi stands, HDB construction sites, and parking zones on traffic flow patterns.
+            </p>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span class="project-title">Yield Curve Modeling Under Negative Interest Rates</span>
+            </div>
+            <p class="project-desc">
+                Empirical study using 20+ years of daily government bond yield data from the Eurozone and Japan to evaluate Nelson-Siegel-Svensson and cubic spline models under negative interest rate regimes. Performed robustness checks using out-of-sample forecasting and bootstrapping.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>I am always happy to discuss research ideas, potential collaborations, or opportunities in academia and industry.</p>
+                <div class="contact-links">
+                    <a href="mailto:naman.a@u.nus.edu" class="contact-link">naman.a@u.nus.edu</a>
+                    <a href="https://github.com/namanlab" class="contact-link" target="_blank">github.com/namanlab</a>
+                    <a href="https://linkedin.com/in/naman-agr" class="contact-link" target="_blank">linkedin.com/in/naman-agr</a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Location</h3>
+                <p>Department of Economics<br>
+                National University of Singapore<br>
+                Singapore</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Naman Agrawal | Last updated February 2026</p>
+    </footer>
+</body>
+</html>
