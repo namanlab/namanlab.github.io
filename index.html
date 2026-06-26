@@ -202,21 +202,35 @@
   <div class="container">
     <h2 class="section-heading">Publications &amp; Working Papers</h2>
 
+    <!-- Category filter -->
+    <div class="paper-filter" role="group" aria-label="Filter papers by research area">
+      <button class="filter-chip is-active" data-filter="all">All</button>
+      <button class="filter-chip" data-filter="applied"><span class="filter-dot cat-dot-applied"></span>Applied Economics</button>
+      <button class="filter-chip" data-filter="cs"><span class="filter-dot cat-dot-cs"></span>CS &amp; AI</button>
+      <button class="filter-chip" data-filter="theory"><span class="filter-dot cat-dot-theory"></span>Economic Theory</button>
+      <button class="filter-chip" data-filter="stats"><span class="filter-dot cat-dot-stats"></span>Statistics</button>
+    </div>
+
     <!-- Published / Forthcoming -->
-    <h3 style="margin-bottom:1rem; color:var(--navy);">Peer-Reviewed Publications and Conferences</h3>
-    <ul class="paper-list" style="margin-bottom:2.5rem;">
+    <div class="paper-group">
+    <h3 class="paper-group-title">Peer-Reviewed Publications and Conferences</h3>
+    <ul class="paper-list">
 
 
-      <li class="paper-item">
-        <p class="paper-title">
-          Crisis, Compassion, and Capital: The Economics of Global Charitable Giving
-          <span class="badge badge-pub">Forthcoming</span>
-        </p>
+      <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Crisis, Compassion, and Capital: The Economics of Global Charitable Giving</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
         <p class="paper-venue">
           To be presented at the Singapore Economic Review Conference (SERC, 2026), Singapore.
         </p>
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-applied">Applied Economics</span>
+          <span class="badge badge-pub">Forthcoming</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Do major crises create new charitable capital, or do they primarily reallocate donor
           attention? We study this question using the universe of nearly 50,000 projects across
           201 countries on GlobalGiving between 2003 and 2025. Exploiting the Russo-Ukrainian
@@ -235,56 +249,66 @@
           these inequalities, widening funding gaps across regions. Taken together, our findings
           suggest that charitable giving operates in an attention-constrained market where major
           crises reshape both the level and distribution of philanthropic capital.
-        </p>
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://arxiv.org/pdf/2510.09926" target="_blank" rel="noopener">Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications</a>
-          <span class="badge badge-pub">Forthcoming</span>
-        </p>
+      <li class="paper-item" data-category="cs" data-link="https://arxiv.org/pdf/2510.09926" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications</span>
+          <a class="link-chip" href="https://arxiv.org/pdf/2510.09926" target="_blank" rel="noopener" aria-label="Open paper (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
         <p class="paper-venue">
           IEEE Conference on Artificial Intelligence (CAI 2026), Granada, Spain.
         </p>
-        <p class="paper-abstract">
-          This study explores the design and application of Complex-Valued Convolutional Neural Networks (CVCNNs) 
-          in the domain of audio signal processing, with a focus on utilizing phase information 
-          often neglected in real-valued networks. Empirical evaluations are conducted across three 
-          stages. First, CVCNNs are benchmarked on standard image datasets (MNIST, KMNIST, FMNIST), 
-          where they demonstrate competitive performance with real-valued CNNs, even under synthetic 
-          perturbations. Although our focus is audio signal processing, we first evaluate CVCNNs on 
-          image datasets to establish baseline performance and validate training stability before 
-          applying them to audio tasks. In the second experiment, we focus on audio classification using 
-          Mel-Frequency Cepstral Coefficients (MFCCs). CVCNNs trained on real-valued MFCCs slightly 
-          outperform real-valued CNNs; however, incorporating phase information into the input does not 
-          lead to measurable performance gains, highlighting the difficulty of exploiting phase 
-          information without phase-aware architectural design. Finally, a third experiment introduces 
-          Graph Neural Networks (GNNs) to explicitly model phase information via edge weighting, where 
-          the inclusion of phase yields measurable gains in binary and multi-class genre classification, 
-          affirming its relevance when appropriately structured. These results underscore the expressive 
-          capacity of complex-valued architectures and confirm phase as a meaningful and exploitable 
-          feature in audio processing applications. Whereas current methods show promise, future 
+        <div class="paper-tags">
+          <span class="cat-tag cat-cs">CS &amp; AI</span>
+          <span class="badge badge-pub">Forthcoming</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
+          This study explores the design and application of Complex-Valued Convolutional Neural Networks (CVCNNs)
+          in the domain of audio signal processing, with a focus on utilizing phase information
+          often neglected in real-valued networks. Empirical evaluations are conducted across three
+          stages. First, CVCNNs are benchmarked on standard image datasets (MNIST, KMNIST, FMNIST),
+          where they demonstrate competitive performance with real-valued CNNs, even under synthetic
+          perturbations. Although our focus is audio signal processing, we first evaluate CVCNNs on
+          image datasets to establish baseline performance and validate training stability before
+          applying them to audio tasks. In the second experiment, we focus on audio classification using
+          Mel-Frequency Cepstral Coefficients (MFCCs). CVCNNs trained on real-valued MFCCs slightly
+          outperform real-valued CNNs; however, incorporating phase information into the input does not
+          lead to measurable performance gains, highlighting the difficulty of exploiting phase
+          information without phase-aware architectural design. Finally, a third experiment introduces
+          Graph Neural Networks (GNNs) to explicitly model phase information via edge weighting, where
+          the inclusion of phase yields measurable gains in binary and multi-class genre classification,
+          affirming its relevance when appropriately structured. These results underscore the expressive
+          capacity of complex-valued architectures and confirm phase as a meaningful and exploitable
+          feature in audio processing applications. Whereas current methods show promise, future
           advances in phase-aware design will be essential to leverage the potential of complex representations in neural networks.
-        </p>
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://arxiv.org/pdf/2502.01273" target="_blank" rel="noopener">Analysis of Student–LLM Interaction in a Software Engineering Project</a>
-          <span class="badge badge-pub">Published</span>
-        </p>
+      <li class="paper-item" data-category="cs" data-link="https://arxiv.org/pdf/2502.01273" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Analysis of Student–LLM Interaction in a Software Engineering Project</span>
+          <a class="link-chip" href="https://arxiv.org/pdf/2502.01273" target="_blank" rel="noopener" aria-label="Open paper (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
+        </div>
         <p class="paper-authors">
           <strong>Agrawal, N.</strong>, Shariffdeen, R., Wang, G., Rasnayaka, S., &amp; Iyer, G. N.
         </p>
         <p class="paper-venue">
           IEEE/ACM International Workshop on Large Language Models for Code (LLM4Code), ICSE 2025, Ottawa, Canada.
         </p>
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-cs">CS &amp; AI</span>
+          <span class="badge badge-pub">Published</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Large Language Models (LLMs) are becoming increasingly competent across various domains, educators are
           showing a growing interest in integrating these LLMs into the
           learning process. Especially in software engineering, LLMs have
-          demonstrated qualitatively better capabilities in code summarization, 
+          demonstrated qualitatively better capabilities in code summarization,
           code generation, and debugging. Despite various research on
           LLMs for software engineering tasks in practice, limited research
           captures the benefits of LLMs for pedagogical advancements
@@ -294,7 +318,7 @@
           benefits of AI for software engineering learning. We analyze
           the conversations, code generated, code utilized, and the human
           intervention levels to integrate the code into the code base.
-          Our findings suggest that students prefer ChatGPT over CoPilot. 
+          Our findings suggest that students prefer ChatGPT over CoPilot.
           Our analysis also finds that ChatGPT generates responses
           with lower computational complexity compared to CoPilot.
           Furthermore, conversational-based interaction helps improve the
@@ -303,57 +327,104 @@
           remain competitive in the rapidly developing landscape. Hence,
           the next generation of software engineers must acquire the
           necessary skills to interact with AI to improve productivity.
-        </p>
+        </div>
       </li>
 
     </ul>
+    </div>
 
     <!-- Software -->
-    <h3 style="margin-bottom:1rem; color:var(--navy);">Software</h3>
-    <ul class="paper-list" style="margin-bottom:2.5rem;">
+    <div class="paper-group">
+    <h3 class="paper-group-title">Software</h3>
+    <ul class="paper-list">
 
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://cran.r-project.org/web/packages/covalchemy/index.html" target="_blank" rel="noopener"><code>covalchemy</code>: R Package for Constructing Joint Distributions with Control over Statistical Properties</a>
-          <span class="badge badge-sw">R Package</span>
-        </p>
+      <li class="paper-item" data-category="stats" data-link="https://cran.r-project.org/web/packages/covalchemy/index.html" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title"><code>covalchemy</code>: R Package for Constructing Joint Distributions with Control over Statistical Properties</span>
+          <a class="link-chip" href="https://cran.r-project.org/web/packages/covalchemy/index.html" target="_blank" rel="noopener" aria-label="Open package page (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong> (2025)</p>
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-stats">Statistics</span>
+          <span class="badge badge-sw">R Package</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Provides tools for constructing multivariate distributions that preserve empirical marginals
           while allowing precise control over correlation structure, mutual information, and higher-order
           dependence via copula-based methods. Benchmark experiments demonstrate marginal fidelity with
           less than 1% error. Designed for research applications and statistical pedagogy, including
           as an engine for reproducible Simpson's paradox benchmarking.
-        </p>
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://cran.r-project.org/web/packages/autoharp/index.html" target="_blank" rel="noopener"><code>autoharp</code>: R Package for Semi-Automatic Grading of R/Rmd Scripts</a>
-          <span class="badge badge-sw">R Package</span>
-        </p>
+      <li class="paper-item" data-category="stats" data-link="https://cran.r-project.org/web/packages/autoharp/index.html" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title"><code>autoharp</code>: R Package for Semi-Automatic Grading of R/Rmd Scripts</span>
+          <a class="link-chip" href="https://cran.r-project.org/web/packages/autoharp/index.html" target="_blank" rel="noopener" aria-label="Open package page (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong>, Gopal, V. et al. (2026)</p>
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-stats">Statistics</span>
+          <span class="badge badge-sw">R Package</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           A customizable toolkit for assessing student R and R Markdown submissions, offering automated
           correctness checks, run-time profiling, and static code analysis. Supports educator workflows
           with functions to render and evaluate scripts, extract code structure, and generate
           comprehensive diagnostic reports.
-        </p>
+        </div>
       </li>
 
     </ul>
+    </div>
 
     <!-- Working Papers -->
-    <h3 style="margin-bottom:1rem; color:var(--navy);">Working Papers</h3>
-    <ul class="paper-list" style="margin-bottom:2.5rem;">
+    <div class="paper-group">
+    <h3 class="paper-group-title">Working Papers</h3>
+    <ul class="paper-list">
 
-      <li class="paper-item">
-        <p class="paper-title">
-          Equilibrium Analysis for Strategic Information Revelation in Data Markets
-          <span class="badge badge-wp">Working Paper</span>
-        </p>
+      <li class="paper-item" data-category="theory" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Equilibrium Analysis for Strategic Information Revelation in Data Markets</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-theory">Economic Theory</span>
+          <span class="badge badge-wp">Working Paper</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
+          The accelerating demand for high-quality training data by large language model developers has
+          intensified the need for principled mechanisms to trade datasets under asymmetric information.
+          We propose a tractable signaling framework in which sellers choose the fraction of a dataset
+          to disclose and buyers update beliefs via Bayesian inference; crucially, disclosure imposes
+          implicit costs through diminishing marginal data quality, which differentially constrains
+          low-quality sellers. We derive analytical conditions for the existence of pooling and separating
+          equilibria, characterize how equilibrium disclosure policies depend on the distribution of
+          seller types and buyer priors, and identify parameter regimes in which markets are most
+          vulnerable to adverse selection. Complementing closed-form results, numerical simulations
+          illustrate how strategic information revelation functions as a credible quality signal and alters
+          bidding and allocation outcomes. Our findings yield actionable implications for the design of
+          data-market institutions (e.g., standardized disclosure, certification, and audit mechanisms)
+          and contribute to the theory of information economics and mechanism design by offering a
+          unified framework to analyze and regulate emerging data marketplaces.
+        </div>
+      </li>
+
+      <li class="paper-item" data-category="theory" data-link="https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5505979" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Rigidity as a Signal: A Game-Theoretic Explanation for Persistent Vacancies in Urban Real Estate Markets</span>
+          <a class="link-chip" href="https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5505979" target="_blank" rel="noopener" aria-label="Open paper (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
+        </div>
+        <p class="paper-authors"><strong>Agrawal, N.</strong></p>
+        <div class="paper-tags">
+          <span class="cat-tag cat-theory">Economic Theory</span>
+          <span class="badge badge-wp">Working Paper</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           This paper develops a game-theoretic framework to explain the persistence of vacant properties
           in urban real estate markets, reframing vacancy as a deliberate and costly signal rather
           than a passive by-product of sluggish price adjustment. We model the interaction between
@@ -377,73 +448,56 @@
           without invoking irrationality or inefficiency. This interpretation not only challenges the view
           of vacancy as pure inefficiency but also offers tractable conditions under which it emerges as
           an equilibrium outcome of rational strategic behavior.
-        </p>
-      </li>
-
-      <li class="paper-item">
-        <p class="paper-title">
-          <a href="https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=5505979" target="_blank" rel="noopener">Rigidity as a Signal: A Game-Theoretic Explanation for Persistent Vacancies in Urban Real Estate Markets</a>
-          <span class="badge badge-wp">Working Paper</span>
-        </p>
-        <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <p class="paper-abstract">
-          The accelerating demand for high-quality training data by large language model developers has
-          intensified the need for principled mechanisms to trade datasets under asymmetric information.
-          We propose a tractable signaling framework in which sellers choose the fraction of a dataset
-          to disclose and buyers update beliefs via Bayesian inference; crucially, disclosure imposes
-          implicit costs through diminishing marginal data quality, which differentially constrains
-          low-quality sellers. We derive analytical conditions for the existence of pooling and separating
-          equilibria, characterize how equilibrium disclosure policies depend on the distribution of
-          seller types and buyer priors, and identify parameter regimes in which markets are most
-          vulnerable to adverse selection. Complementing closed-form results, numerical simulations
-          illustrate how strategic information revelation functions as a credible quality signal and alters
-          bidding and allocation outcomes. Our findings yield actionable implications for the design of
-          data-market institutions (e.g., standardized disclosure, certification, and audit mechanisms)
-          and contribute to the theory of information economics and mechanism design by offering a
-          unified framework to analyze and regulate emerging data marketplaces.
-        </p>
+        </div>
       </li>
 
     </ul>
+    </div>
 
     <!-- Work in Progress -->
-    <h3 style="margin-bottom:1rem; color:var(--navy);">Work in Progress</h3>
+    <div class="paper-group">
+    <h3 class="paper-group-title">Work in Progress</h3>
     <ul class="paper-list">
 
 
-      <li class="paper-item">
-        <p class="paper-title">
-          MOSAIC: Set-Based Multi-Bit Watermarking for Language Models
-          <span class="badge badge-wip">Work in Progress</span>
-        </p>
+      <li class="paper-item" data-category="cs" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">MOSAIC: Set-Based Multi-Bit Watermarking for Language Models</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <!--
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-cs">CS &amp; AI</span>
+          <span class="badge badge-wip">Work in Progress</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Multi-bit watermarking embeds a recoverable message into language-model output so that a
-        party holding a secret key can later read out a payload such as a user or request identifier. The
-        central obstacle is the exact-match requirement: every payload bit must be recovered. Schemes
-        that decode bits independently attain an exact-match probability of only βk for per-bit accuracy
-        β and payload size k, which collapses as k grows, and schemes that bind the signal to token
-        positions are fragile to reordering, insertion, and deletion. We introduce MOSAIC, which reads
-        generated text as an unordered set of parity samples rather than an ordered sequence. Each
-        token, keyed by an order-canonical hash of its local context, emits one parity check over a random
-        subset of the payload bits, in the manner of a fountain code, and the payload is recovered from
-        the whole unordered collection by belief propagation. WOn Llama-2-7B with OpenGen prompts and a constant
-        logit bias, MOSAIC attains more than 95% exact match rate at payloads of 16, 24, and 32, and more than 85% on 48 bits, 
-        with detection that is exact under block reordering, degrades gracefully under
-        edits as the theory predicts, and is model-free. 
-        </p>
-        -->
+          party holding a secret key can later read out a payload such as a user or request identifier. The
+          central obstacle is the exact-match requirement: every payload bit must be recovered. Schemes
+          that decode bits independently attain an exact-match probability of only β<sup>k</sup> for per-bit accuracy
+          β and payload size k, which collapses as k grows, and schemes that bind the signal to token
+          positions are fragile to reordering, insertion, and deletion. We introduce MOSAIC, which reads
+          generated text as an unordered set of parity samples rather than an ordered sequence. Each
+          token, keyed by an order-canonical hash of its local context, emits one parity check over a random
+          subset of the payload bits, in the manner of a fountain code, and the payload is recovered from
+          the whole unordered collection by belief propagation. On Llama-2-7B with OpenGen prompts and a constant
+          logit bias, MOSAIC attains more than 95% exact match rate at payloads of 16, 24, and 32, and more than 85% on 48 bits,
+          with detection that is exact under block reordering, degrades gracefully under
+          edits as the theory predicts, and is model-free.
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          Cultural Flows in the Digital Age: Evidence from YouTube's Global Music Charts
-          <span class="badge badge-wip">Work in Progress</span>
-        </p>
+      <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Cultural Flows in the Digital Age: Evidence from YouTube's Global Music Charts</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <!--
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-applied">Applied Economics</span>
+          <span class="badge badge-wip">Work in Progress</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Analyzes 1.26 million weekly entries from YouTube Music's Top-100 charts across 60 countries
           (2021–2025) to map global music circulation. Graph-based clustering reveals three stable listening
           blocs: a cohesive Latin American community, a broad global mainstream cluster linking Europe
@@ -451,49 +505,68 @@
           that shared language is the strongest predictor of musical affinity, with asymmetric diffusion
           networks positioning the United States as the central hub and Mexico as the pivotal conduit
           for Spanish-language content.
-        </p>
-        -->
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          Seventy-Five Years of the Supreme Court of India: An Empirical Analysis of Judicial
-          Decision-Making, Citation Networks, and Institutional Evolution
-          <span class="badge badge-wip">Work in Progress</span>
-        </p>
+      <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Seventy-Five Years of the Supreme Court of India: An Empirical Analysis of Judicial Decision-Making, Citation Networks, and Institutional Evolution</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <!--
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-applied">Applied Economics</span>
+          <span class="badge badge-wip">Work in Progress</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Constructs a novel dataset of 42,833 judgments with structured metadata extracted using
           large language models, covering party characteristics, legal doctrines, constitutional
           provisions, precedent citations, bench composition, and case outcomes. Estimates determinants
           of appellant success using OLS, logit, probit, and high-dimensional fixed effects, with
           causal identification through IV, RDD, and DiD designs. Maps citation networks to identify
           the 50 most influential precedents and detect doctrinal communities via Louvain clustering.
-        </p>
-        -->
+        </div>
       </li>
 
-      <li class="paper-item">
-        <p class="paper-title">
-          Copula-Based Approaches to Engineering Simpson's Paradox and Applications to Fairness Evaluation
-          <span class="badge badge-wip">Work in Progress</span>
-        </p>
+      <li class="paper-item" data-category="stats" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">Copula-Based Approaches to Engineering Simpson's Paradox and Applications to Fairness Evaluation</span>
+        </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong> &amp; Gopal, V.</p>
-        <!--
-        <p class="paper-abstract">
+        <div class="paper-tags">
+          <span class="cat-tag cat-stats">Statistics</span>
+          <span class="badge badge-wip">Work in Progress</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
           Presents a reproducible copula-based pipeline, using quantile inverse-CDF mapping, targeted
           copula dependence, assignment optimization, and simulated annealing, to generate tunable
           Simpson's paradox datasets for algorithmic fairness benchmarking. Demonstrates that pooled
           estimators can mask severe subgroup failures, providing a practical testbed for fairness
           diagnostics. Implementation is available in the <code>covalchemy</code> R package.
-        </p>
-        -->
+        </div>
       </li>
 
     </ul>
+    </div>
+
+    <p class="papers-empty" hidden>No papers in this research area yet.</p>
   </div>
 </section>
+
+<!-- ==================== PAPER MODAL ==================== -->
+<div class="modal-overlay" id="paper-modal" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" type="button" aria-label="Close abstract">&times;</button>
+    <div class="modal-cats" id="modal-cats"></div>
+    <h3 class="modal-title" id="modal-title"></h3>
+    <p class="modal-authors" id="modal-authors"></p>
+    <p class="modal-venue" id="modal-venue" hidden></p>
+    <h4 class="modal-label">Abstract</h4>
+    <div class="modal-abstract" id="modal-abstract"></div>
+    <div class="modal-actions" id="modal-actions"></div>
+  </div>
+</div>
 
 <!-- ==================== EXPERIENCE ==================== -->
 <section id="experience">
@@ -838,6 +911,108 @@
   window.addEventListener('popstate', () => {
     const id = window.location.hash.slice(1) || 'about';
     showSection(id);
+  });
+
+  /* ---------- Papers: category filter ---------- */
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const paperItems  = document.querySelectorAll('.paper-item');
+  const paperGroups = document.querySelectorAll('.paper-group');
+  const emptyNote   = document.querySelector('.papers-empty');
+
+  function applyFilter(key) {
+    paperItems.forEach(item => {
+      const cats = (item.dataset.category || '').split(/\s+/);
+      const show = key === 'all' || cats.includes(key);
+      item.style.display = show ? '' : 'none';
+    });
+    // Hide group headings that have no visible papers
+    let anyVisible = false;
+    paperGroups.forEach(group => {
+      const visible = group.querySelectorAll('.paper-item:not([style*="display: none"])').length;
+      group.style.display = visible ? '' : 'none';
+      if (visible) anyVisible = true;
+    });
+    if (emptyNote) emptyNote.hidden = anyVisible;
+  }
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => c.classList.remove('is-active'));
+      chip.classList.add('is-active');
+      applyFilter(chip.dataset.filter);
+    });
+  });
+
+  /* ---------- Papers: abstract modal ---------- */
+  const modal        = document.getElementById('paper-modal');
+  const modalBox     = modal.querySelector('.modal-box');
+  const modalCats    = document.getElementById('modal-cats');
+  const modalTitle   = document.getElementById('modal-title');
+  const modalAuthors = document.getElementById('modal-authors');
+  const modalVenue   = document.getElementById('modal-venue');
+  const modalAbstract= document.getElementById('modal-abstract');
+  const modalActions = document.getElementById('modal-actions');
+  const modalClose   = modal.querySelector('.modal-close');
+  let lastFocused    = null;
+
+  function openModal(item) {
+    lastFocused = item;
+    modalCats.innerHTML    = '';
+    item.querySelectorAll('.cat-tag').forEach(t => modalCats.appendChild(t.cloneNode(true)));
+
+    modalTitle.innerHTML   = item.querySelector('.paper-title').innerHTML;
+
+    const authors = item.querySelector('.paper-authors');
+    modalAuthors.innerHTML = authors ? authors.innerHTML : '';
+    modalAuthors.hidden    = !authors;
+
+    const venue = item.querySelector('.paper-venue');
+    modalVenue.innerHTML   = venue ? venue.innerHTML : '';
+    modalVenue.hidden      = !venue;
+
+    const store = item.querySelector('.paper-abstract-store');
+    modalAbstract.innerHTML = store ? store.innerHTML : 'Abstract coming soon.';
+
+    modalActions.innerHTML = '';
+    const link = item.dataset.link;
+    if (link) {
+      const a = document.createElement('a');
+      a.href = link;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.className = 'btn btn-modal-link';
+      a.innerHTML = '<i class="fa fa-arrow-up-right-from-square"></i> Read the paper';
+      modalActions.appendChild(a);
+    }
+
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  paperItems.forEach(item => {
+    item.addEventListener('click', e => {
+      if (e.target.closest('.link-chip')) return; // let direct links work
+      openModal(item);
+    });
+    item.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal(item);
+      }
+    });
+  });
+
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
 </script>
 
