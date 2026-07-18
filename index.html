@@ -217,9 +217,10 @@
     <ul class="paper-list">
 
 
-      <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
+      <li class="paper-item" data-category="applied" data-link="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6996220" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="paper-head">
           <span class="paper-title">Crisis, Compassion, and Capital: The Economics of Global Charitable Giving</span>
+          <a class="link-chip" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6996220" target="_blank" rel="noopener" aria-label="Open paper (opens in new tab)"><i class="fa fa-arrow-up-right-from-square"></i> LINK</a>
         </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
         <p class="paper-venue">
@@ -388,6 +389,65 @@
 
       <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="paper-head">
+          <span class="paper-title">Crowding In or Crowding Out? Donor-Level Evidence on Private Charity and the Retreating State</span>
+        </div>
+        <p class="paper-authors"><strong>Agrawal, N.</strong></p>
+        <div class="paper-tags">
+          <span class="cat-tag cat-applied">Applied Economics</span>
+          <span class="badge badge-wp">Working Paper</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
+          When governments withdraw support, does private charity replace the lost resources, or merely redirect giving 
+          from elsewhere? We study this question using the 43-day 2025 United States federal government shutdown and the 
+          public donation history of GoFundMe, comprising 32.6 million timestamped donations across more than 776,000 campaigns. 
+          The shutdown provides a sharp, plausibly exogenous reduction in public support with substantial cross-state 
+          variation in exposure. We find that private giving responds immediately. Donations to shutdown-related campaigns 
+          increase by roughly 180 percent relative to policy-inert causes, driven almost entirely by new donors rather than 
+          larger gifts. At the individual level, donors who support shutdown campaigns reduce their giving to other causes, 
+          consistent with portfolio reallocation. At the aggregate level, however, total giving expands most in states more 
+          exposed to the shutdown, implying that entry by new donors more than offsets individual substitution. External data 
+          on two further withdrawal channels show that the response tracks need as well as attention: food-cause giving rose 
+          with state SNAP dependence during the November benefit lapse, and shutdown giving persisted after reopening where 
+          federal contractors, who received no back pay, are concentrated. Despite this crowding in, the private response is 
+          economically small, replacing only around 0.01 percent of withheld wages. Moreover, it is highly unequal: richer 
+          states receive substantially more replacement funding, disadvantaged beneficiaries raise less, and campaign 
+          success depends more on deservingness narratives than described material need. Private charity therefore 
+          responds rapidly to government withdrawal, but it provides only a shallow, unequal, and incomplete substitute 
+          for public provision.
+        </div>
+      </li>
+
+      <li class="paper-item" data-category="cs" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
+          <span class="paper-title">MOSAIC: Set-Based Multi-Bit Watermarking for Language Models</span>
+        </div>
+        <p class="paper-authors"><strong>Agrawal, N.</strong></p>
+        <div class="paper-tags">
+          <span class="cat-tag cat-cs">CS &amp; AI</span>
+          <span class="badge badge-wip">Work in Progress</span>
+          <span class="abstract-cue">View abstract</span>
+        </div>
+        <div class="paper-abstract-store" hidden>
+          Multi-bit watermarking embeds a recoverable message into language-model output so that a
+          party holding a secret key can later read out a payload such as a user or request identifier. The
+          central obstacle is the exact-match requirement: every payload bit must be recovered. Schemes
+          that decode bits independently attain an exact-match probability of only β<sup>k</sup> for per-bit accuracy
+          β and payload size k, which collapses as k grows, and schemes that bind the signal to token
+          positions are fragile to reordering, insertion, and deletion. We introduce MOSAIC, which reads
+          generated text as an unordered set of parity samples rather than an ordered sequence. Each
+          token, keyed by an order-canonical hash of its local context, emits one parity check over a random
+          subset of the payload bits, in the manner of a fountain code, and the payload is recovered from
+          the whole unordered collection by belief propagation. On Llama-2-7B with OpenGen prompts and a constant
+          logit bias, MOSAIC attains more than 95% exact match rate at payloads of 16, 24, and 32, and more than 85% on 48 bits,
+          with detection that is exact under block reordering, degrades gracefully under
+          edits as the theory predicts, and is model-free.
+        </div>
+      </li>
+
+
+      <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="paper-head">
           <span class="paper-title">The Revealed Value of a Rare Bird: Travel-Cost Valuation of Biodiversity from Vagrant Bird Sightings</span>
         </div>
         <p class="paper-authors"><strong>Agrawal, N.</strong></p>
@@ -495,34 +555,6 @@
     <div class="paper-group">
     <h3 class="paper-group-title">Work in Progress</h3>
     <ul class="paper-list">
-
-
-      <li class="paper-item" data-category="cs" tabindex="0" role="button" aria-haspopup="dialog">
-        <div class="paper-head">
-          <span class="paper-title">MOSAIC: Set-Based Multi-Bit Watermarking for Language Models</span>
-        </div>
-        <p class="paper-authors"><strong>Agrawal, N.</strong></p>
-        <div class="paper-tags">
-          <span class="cat-tag cat-cs">CS &amp; AI</span>
-          <span class="badge badge-wip">Work in Progress</span>
-          <span class="abstract-cue">View abstract</span>
-        </div>
-        <div class="paper-abstract-store" hidden>
-          Multi-bit watermarking embeds a recoverable message into language-model output so that a
-          party holding a secret key can later read out a payload such as a user or request identifier. The
-          central obstacle is the exact-match requirement: every payload bit must be recovered. Schemes
-          that decode bits independently attain an exact-match probability of only β<sup>k</sup> for per-bit accuracy
-          β and payload size k, which collapses as k grows, and schemes that bind the signal to token
-          positions are fragile to reordering, insertion, and deletion. We introduce MOSAIC, which reads
-          generated text as an unordered set of parity samples rather than an ordered sequence. Each
-          token, keyed by an order-canonical hash of its local context, emits one parity check over a random
-          subset of the payload bits, in the manner of a fountain code, and the payload is recovered from
-          the whole unordered collection by belief propagation. On Llama-2-7B with OpenGen prompts and a constant
-          logit bias, MOSAIC attains more than 95% exact match rate at payloads of 16, 24, and 32, and more than 85% on 48 bits,
-          with detection that is exact under block reordering, degrades gracefully under
-          edits as the theory predicts, and is model-free.
-        </div>
-      </li>
 
       <li class="paper-item" data-category="applied" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="paper-head">
