@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Icons (Font Awesome via CDN) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,7 +31,9 @@
       <li><a href="#papers">Papers</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#teaching">Teaching</a></li>
+      <!-- Projects tab hidden for now
       <li><a href="#projects">Projects</a></li>
+      -->
       <li><a href="#awards">Awards</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -40,11 +42,13 @@
 
 <!-- ==================== HERO ==================== -->
 <section id="hero" aria-label="Introduction">
-  <div class="container">
+  <canvas id="net-canvas" aria-hidden="true"></canvas>
+  <div class="container hero-wrap">
     <div class="hero-content">
       <div class="hero-text">
-        <h1>Naman Agrawal</h1>
-        <p class="hero-tagline">Computational methods for social science, economics, and machine learning.</p>
+        <p class="hero-kicker">predoctoral researcher &middot; dept. of economics &middot; nus</p>
+        <h1>Naman <span class="grad-text">Agrawal</span></h1>
+        <p class="hero-tagline">I work on <span id="typewriter"></span><span class="type-caret" aria-hidden="true"></span></p>
         <p class="hero-bio">
           I am a predoctoral researcher in the Department of Economics at the National University of Singapore. My research sits at the intersection of
           empirical economics, machine learning, and computational social science, using large-scale data,
@@ -71,12 +75,13 @@
           </a>
         </div>
       </div>
-      <div class="hero-avatar">
-        <img src="logo.png" alt="Naman Agrawal" />
+      <div class="hero-avatar-wrap">
+        <div class="hero-orbit" aria-hidden="true"></div>
+        <div class="hero-avatar">
+          <img src="logo.png" alt="Naman Agrawal" />
+        </div>
       </div>
     </div>
-
-
   </div>
 </section>
 
@@ -202,6 +207,29 @@
   <div class="container">
     <h2 class="section-heading">Publications &amp; Working Papers</h2>
 
+    <!-- Research log: dated checkpoints of new papers & milestones -->
+    <details class="research-log" open>
+      <summary><i class="fa fa-timeline"></i> Research Log <span class="log-hint">— what's new, and when</span></summary>
+      <ol class="log-list">
+        <li class="log-entry">
+          <span class="log-date">Jul 2026</span>
+          <span class="log-text">New working paper <em>"Crowding In or Crowding Out? Donor-Level Evidence on Private Charity and the Retreating State"</em>, and new work in progress <em>"MOSAIC: Set-Based Multi-Bit Watermarking for Language Models"</em>.</span>
+        </li>
+        <li class="log-entry">
+          <span class="log-date">Jul 2026</span>
+          <span class="log-text">New working paper <em>"The Revealed Value of a Rare Bird: Travel-Cost Valuation of Biodiversity from Vagrant Bird Sightings"</em>.</span>
+        </li>
+        <li class="log-entry">
+          <span class="log-date">Apr 2026</span>
+          <span class="log-text"><em>"Crisis, Compassion, and Capital"</em> accepted for presentation at the Singapore Economic Review Conference (SERC 2026).</span>
+        </li>
+        <li class="log-entry">
+          <span class="log-date">Jan 2026</span>
+          <span class="log-text"><em>"Phase-Aware Deep Learning with Complex-Valued CNNs"</em> published at IEEE CAI 2026, Granada.</span>
+        </li>
+      </ol>
+    </details>
+
     <!-- Category filter -->
     <div class="paper-filter" role="group" aria-label="Filter papers by research area">
       <button class="filter-chip is-active" data-filter="all">All</button>
@@ -229,6 +257,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-applied">Applied Economics</span>
           <span class="badge badge-pub">Forthcoming</span>
+          <span class="added-chip" title="Added to this site in April 2026"><i class="fa fa-clock-rotate-left"></i> Apr 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -265,6 +294,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-cs">CS &amp; AI</span>
           <span class="badge badge-pub">Published</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -303,6 +333,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-cs">CS &amp; AI</span>
           <span class="badge badge-pub">Published</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -348,6 +379,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-stats">Statistics</span>
           <span class="badge badge-sw">R Package</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -368,6 +400,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-stats">Statistics</span>
           <span class="badge badge-sw">R Package</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -395,6 +428,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-applied">Applied Economics</span>
           <span class="badge badge-wp">Working Paper</span>
+          <span class="added-chip added-chip--new" title="Added to this site in July 2026"><i class="fa fa-clock-rotate-left"></i> Jul 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -426,6 +460,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-cs">CS &amp; AI</span>
           <span class="badge badge-wip">Work in Progress</span>
+          <span class="added-chip added-chip--new" title="Added to this site in July 2026"><i class="fa fa-clock-rotate-left"></i> Jul 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -454,6 +489,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-applied">Applied Economics</span>
           <span class="badge badge-wp">Working Paper</span>
+          <span class="added-chip added-chip--new" title="Added to this site in July 2026"><i class="fa fa-clock-rotate-left"></i> Jul 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -490,6 +526,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-theory">Economic Theory</span>
           <span class="badge badge-wp">Working Paper</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -519,6 +556,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-theory">Economic Theory</span>
           <span class="badge badge-wp">Working Paper</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -564,6 +602,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-applied">Applied Economics</span>
           <span class="badge badge-wip">Work in Progress</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -585,6 +624,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-applied">Applied Economics</span>
           <span class="badge badge-wip">Work in Progress</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -605,6 +645,7 @@
         <div class="paper-tags">
           <span class="cat-tag cat-stats">Statistics</span>
           <span class="badge badge-wip">Work in Progress</span>
+          <span class="added-chip" title="Added to this site in February 2026"><i class="fa fa-clock-rotate-left"></i> Feb 2026</span>
           <span class="abstract-cue">View abstract</span>
         </div>
         <div class="paper-abstract-store" hidden>
@@ -781,7 +822,7 @@
   </div>
 </section>
 
-<!-- ==================== PROJECTS ==================== -->
+<!-- ==================== PROJECTS (hidden for now — remove this comment wrapper to restore) ====================
 <section id="projects">
   <div class="container">
     <h2 class="section-heading">Selected Projects</h2>
@@ -830,6 +871,7 @@
     </div>
   </div>
 </section>
+==================== END PROJECTS ==================== -->
 
 <!-- ==================== AWARDS ==================== -->
 <section id="awards">
@@ -949,10 +991,13 @@
 
   function showSection(id) {
     allSections.forEach(sec => {
-      if (sec.id === 'hero') {
-        sec.style.display = (id === 'about') ? '' : 'none';
-      } else {
-        sec.style.display = (sec.id === id) ? '' : 'none';
+      const show = (sec.id === 'hero') ? (id === 'about') : (sec.id === id);
+      sec.style.display = show ? '' : 'none';
+      if (show) {
+        // retrigger the entry animation on every tab switch
+        sec.classList.remove('section-enter');
+        void sec.offsetWidth;
+        sec.classList.add('section-enter');
       }
     });
     navLinks.forEach(a => {
@@ -1027,7 +1072,7 @@
   function openModal(item) {
     lastFocused = item;
     modalCats.innerHTML    = '';
-    item.querySelectorAll('.cat-tag').forEach(t => modalCats.appendChild(t.cloneNode(true)));
+    item.querySelectorAll('.cat-tag, .added-chip').forEach(t => modalCats.appendChild(t.cloneNode(true)));
 
     modalTitle.innerHTML   = item.querySelector('.paper-title').innerHTML;
 
@@ -1083,6 +1128,180 @@
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && !modal.hidden) closeModal();
   });
+
+  /* ---------- Motion preference ---------- */
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Hero: typewriter ---------- */
+  const typeTarget = document.getElementById('typewriter');
+  const phrases = [
+    'causal inference at scale.',
+    'media & political economy.',
+    'deep learning for audio & vision.',
+    'networks, text & markets.'
+  ];
+
+  if (typeTarget) {
+    if (reduceMotion) {
+      typeTarget.textContent = phrases[0];
+    } else {
+      let phraseIdx = 0, charIdx = 0, deleting = false;
+      (function tick() {
+        const phrase = phrases[phraseIdx];
+        charIdx += deleting ? -1 : 1;
+        typeTarget.textContent = phrase.slice(0, charIdx);
+        let delay = deleting ? 32 : 62;
+        if (!deleting && charIdx === phrase.length) { delay = 2200; deleting = true; }
+        else if (deleting && charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; delay = 350; }
+        setTimeout(tick, delay);
+      })();
+    }
+  }
+
+  /* ---------- Hero: particle network canvas ---------- */
+  const canvas = document.getElementById('net-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    const LINK_DIST = 135;
+    const MOUSE_DIST = 190;
+    let W = 0, H = 0, nodes = [], pulses = [];
+    const mouse = { x: -9999, y: -9999 };
+
+    function sizeCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = canvas.offsetWidth; H = canvas.offsetHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function initNodes() {
+      const count = Math.max(40, Math.min(110, Math.floor(W * H / 15000)));
+      nodes = Array.from({ length: count }, () => ({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - .5) * .35,
+        vy: (Math.random() - .5) * .35,
+        r: Math.random() * 1.7 + .9,
+        hue: Math.random() < .55 ? 187 : 258  // cyan / violet
+      }));
+      pulses = [];
+    }
+
+    function spawnPulse() {
+      // pick a random pair of currently-linked nodes and send a light along the edge
+      for (let tries = 0; tries < 24; tries++) {
+        const a = nodes[(Math.random() * nodes.length) | 0];
+        const b = nodes[(Math.random() * nodes.length) | 0];
+        if (a === b) continue;
+        const d = Math.hypot(a.x - b.x, a.y - b.y);
+        if (d < LINK_DIST) { pulses.push({ a, b, t: 0, speed: .008 + Math.random() * .012 }); return; }
+      }
+    }
+
+    function frame() {
+      // skip work while the hero tab is hidden
+      if (canvas.offsetParent === null) { requestAnimationFrame(frame); return; }
+      ctx.clearRect(0, 0, W, H);
+
+      for (const n of nodes) {
+        n.x += n.vx; n.y += n.vy;
+        if (n.x < -20) n.x = W + 20; else if (n.x > W + 20) n.x = -20;
+        if (n.y < -20) n.y = H + 20; else if (n.y > H + 20) n.y = -20;
+
+        // gentle pull toward the cursor
+        const dm = Math.hypot(n.x - mouse.x, n.y - mouse.y);
+        if (dm < MOUSE_DIST && dm > 1) {
+          n.x += (mouse.x - n.x) / dm * .35;
+          n.y += (mouse.y - n.y) / dm * .35;
+        }
+      }
+
+      // edges
+      for (let i = 0; i < nodes.length; i++) {
+        const a = nodes[i];
+        for (let j = i + 1; j < nodes.length; j++) {
+          const b = nodes[j];
+          const dx = a.x - b.x, dy = a.y - b.y;
+          if (Math.abs(dx) > LINK_DIST || Math.abs(dy) > LINK_DIST) continue;
+          const d = Math.hypot(dx, dy);
+          if (d < LINK_DIST) {
+            const alpha = (1 - d / LINK_DIST) * .34;
+            ctx.strokeStyle = 'rgba(125,180,240,' + alpha.toFixed(3) + ')';
+            ctx.lineWidth = 1;
+            ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+          }
+        }
+        // edge to cursor
+        const dm = Math.hypot(a.x - mouse.x, a.y - mouse.y);
+        if (dm < MOUSE_DIST) {
+          const alpha = (1 - dm / MOUSE_DIST) * .5;
+          ctx.strokeStyle = 'rgba(34,211,238,' + alpha.toFixed(3) + ')';
+          ctx.lineWidth = 1;
+          ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+        }
+      }
+
+      // nodes
+      for (const n of nodes) {
+        ctx.fillStyle = 'hsla(' + n.hue + ', 85%, 70%, .85)';
+        ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+      }
+
+      // pulses of light traveling along edges
+      for (let i = pulses.length - 1; i >= 0; i--) {
+        const p = pulses[i];
+        p.t += p.speed;
+        if (p.t >= 1 || Math.hypot(p.a.x - p.b.x, p.a.y - p.b.y) > LINK_DIST * 1.6) {
+          pulses.splice(i, 1); continue;
+        }
+        const x = p.a.x + (p.b.x - p.a.x) * p.t;
+        const y = p.a.y + (p.b.y - p.a.y) * p.t;
+        const glow = ctx.createRadialGradient(x, y, 0, x, y, 7);
+        glow.addColorStop(0, 'rgba(240,196,109,.95)');
+        glow.addColorStop(1, 'rgba(240,196,109,0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath(); ctx.arc(x, y, 7, 0, Math.PI * 2); ctx.fill();
+      }
+
+      requestAnimationFrame(frame);
+    }
+
+    sizeCanvas();
+    initNodes();
+
+    if (reduceMotion) {
+      // draw a single static frame, no animation
+      const staticDraw = () => {
+        ctx.clearRect(0, 0, W, H);
+        for (let i = 0; i < nodes.length; i++) {
+          const a = nodes[i];
+          for (let j = i + 1; j < nodes.length; j++) {
+            const b = nodes[j];
+            const d = Math.hypot(a.x - b.x, a.y - b.y);
+            if (d < LINK_DIST) {
+              ctx.strokeStyle = 'rgba(125,180,240,' + ((1 - d / LINK_DIST) * .3).toFixed(3) + ')';
+              ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+            }
+          }
+          ctx.fillStyle = 'hsla(' + a.hue + ', 85%, 70%, .85)';
+          ctx.beginPath(); ctx.arc(a.x, a.y, a.r, 0, Math.PI * 2); ctx.fill();
+        }
+      };
+      staticDraw();
+      window.addEventListener('resize', () => { sizeCanvas(); initNodes(); staticDraw(); });
+    } else {
+      requestAnimationFrame(frame);
+      setInterval(spawnPulse, 700);
+      window.addEventListener('resize', () => { sizeCanvas(); initNodes(); });
+      const hero = document.getElementById('hero');
+      hero.addEventListener('mousemove', e => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+      });
+      hero.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; });
+    }
+  }
 </script>
 
 </body>
