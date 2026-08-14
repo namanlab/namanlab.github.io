@@ -81,7 +81,7 @@
 %-------------------------
 \section{Research Interests}
 %Natural Language Processing  \textbullet\ Game Theory \textbullet\ Computer Vision \textbullet\ Statistics \textbullet\ Computational Social Science \textbullet\ Applied Econometrics \textbullet\ Political Economy \textbullet\ Development Economics 
-Deep Learning \textbullet\ Natural Language Processing \textbullet\ Computer Vision \textbullet\ Bayesian Methods \textbullet\ Statistical Learning \textbullet\ Data Science \textbullet\ Computational Social Science
+Deep Learning \textbullet\ Algorithm Design \textbullet\ Natural Language Processing \textbullet\ Bayesian Methods \textbullet\ Computational Social Science \textbullet\ Game Theory \textbullet\ Applied Econometrics
 
 %-------------------------
 % EDUCATION
@@ -109,49 +109,48 @@ Coursework: Advanced Micro \& Macro Economics, Econometrics, Game Theory \& Mech
 
 \cventry{Department of Economics, National University of Singapore}{Aug 2025 -- Present}{Predoctoral Researcher under Dr. Ruben Durante and Dr. Xiaoyue Shan}{Singapore}
 \begin{itemize}
-    \item Built a large-scale media dataset on Gaza coverage, collecting 200k+ newspaper articles from 40+ outlets across 15+ countries (2004–2024). Automated scraping, URL extraction, metadata structuring, and regression-based analysis of coverage trends.
-    \item Created automation tools for resume generation and bulk job applications, deployed for 10,000+ applications on BDJobs to study how job application patterns across gender and expected salaries relate to labor market outcomes.
-    \item Constructed a longitudinal dataset of street names for all Spanish municipalities (2000–2024) using OpenStreetMap/ Geofabrik, geospatial matching, NER, and Wikidata linkage to study symbolic policy through street renaming.
-    \item Designed and implemented infrastructure for a field experiment on Upwork, including automated profile scraping, creation of 20+ task websites, and survey instruments capturing political preferences and labor-supply decisions.
-    \item Applied LLM-based classification to detect dog-whistle political rhetoric in ads across multiple election cycles, analyzing trends in coded appeals across campaigns and voter groups.
-    \item Built and supported research pipelines to analyze PhD supervisor-student matching and peer effects, applied deep learning models to text data and unordered peer characteristics for predictive modeling.
+\item Built large-scale data pipelines for web scraping, entity resolution, geospatial matching, NER, and metadata extraction across diverse datasets, including 200k+ news articles, the universe of Freelancer projects, and longitudinal street-name data covering all Spanish municipalities. Used these datasets to study conflict coverage, labor market behavior, symbolic politics, and the evolution of online work in the wake of gen AI.
+\item Developed computational methods to study political behavior, combining deep learning, organizational network data, and structured databases. Projects included LLM-based detection of political dog whistles across election cycles, predictive modeling based on peer characteristics for supervisor-student matching, and identifcation of potential conflicts of interest by linking media coverage to corporate ownership structures in Orbis.
+\item Designed computational infrastructure for large-scale field experiments including 20+ experimental task websites, survey instruments, and automated application systems. Deployed these tools on BDJobs and Upwork to study gender, expectations, political preferences, and labor-supply decisions.
+
 \end{itemize}
+
 
 \vspace{4pt}
 
 \cventry{Procter \& Gamble and Institute of Mathematical Sciences}{May 2024 -- Jul 2024}{Research Intern in Statistics (Bayesian Dynamic Borrowing)}{Singapore}
 \begin{itemize}
-    \item Collaborated with P\&G research team to develop adaptive algorithms for leveraging historical data in randomized controlled trials to minimize sample sizes for control groups while ensuring trial integrity through proper Type I and Type II error control.
-    \item Optimized Bayesian borrowing techniques, including normalized power priors, commensurate priors, elastic priors, and meta-analytic-predictive priors, reducing computational overhead by up to 78\% and improving borrowing accuracy in trials with low historical congruence.
+    \item Collaborated with P\&G's research team to develop adaptive trial-design algorithms that leverage historical data to reduce control-group sample sizes in randomized controlled trials while preserving statistical validity and Type I/II error control. Applied these methods to oral care and face cream trials, evaluating their performance across varying degrees of congruence between historical and current trial data.
+    \item Optimized Bayesian borrowing techniques, including normalized power priors, commensurate priors, elastic priors, Bayesian hierarchical models, and meta-analytic-predictive priors, to improve borrowing accuracy in trials with low historical congruence, while reducing computational overhead by up to 78\%.
 \end{itemize}
 
 \vspace{4pt}
 
-\cventry{School of Computing, National University of Singapore}{Nov 2022 -- Feb 2023; May 2024 -- Aug 2024}{Research Intern in Financial Data Science and Econometrics}{Singapore}
+\cventry{School of Computing, National University of Singapore}{Nov 2022 -- Feb 2023; May 2024 -- Aug 2024}{Research Intern in Financial Data Science}{Singapore}
 \begin{itemize}
-    \item Examined alliance networks and their temporal effects on firm profitability, utilizing the Louvain community detection algorithm and network centrality measures to provide strategic insights on how dynamic inter-firm networks impact long-term performance.
-    \item Explored ensemble techniques and base learners for XGBoost models to optimize financial fraud prediction pipelines, achieving 99\% accuracy through advanced statistical inference and rigorous model evaluation techniques.
+    \item Examined firm alliance networks and their temporal effects on profitability, utilizing Louvain community detection and network centrality measures to understand how dynamic inter-firm networks impact long-term performance.
+    \item Explored several ensemble techniques and base learners for XGBoost models to optimize financial fraud prediction.
 \end{itemize}
 
 \vspace{4pt}
 
-\cventry{Singapore Bus Services Transit (SBST)}{Jul 2023 -- Mar 2024}{Research Intern in Machine Learning (Computer Vision)}{Singapore}
+\cventry{Singapore Bus Services Transit}{Jul 2023 -- Mar 2024}{Research Intern in Machine Learning (Computer Vision)}{Singapore}
 \begin{itemize}
-    \item Researched and developed a system for identifying visual impairments such as blurriness and overexposure in surveillance footage using deep convolutional neural networks, achieving 96\% classification accuracy.
-    \item Implemented a Siamese Network architecture utilizing SVD Maps and Fourier Transformation features with OpenCV, TensorFlow, and Keras for robust blur detection across varying video conditions.
+    \item Developed deep convolutional models to detect visual impairments in surveillance footage, including blur and overexposure, achieving 96\% classification accuracy across heterogeneous scenes ranging from high-contrast stationary backgrounds to roads with continuous vehicle activity.
+    \item Designed a custom Siamese architecture combining SVD-based and Fourier-domain representations for robust blur detection, distinguishing genuine image degradation from motion-induced artifacts across diverse conditions.
 \end{itemize}
 
 \vspace{4pt}
 
 \cventry{Jio AI Centre for Excellence}{May 2023 -- Aug 2023}{Research Intern in Machine Learning (3D Computer Vision)}{India}
 \begin{itemize}
-    \item Researched algorithms for Simultaneous Localization and Mapping (SLAM): attention-based graph feature matching (SuperGlue), 3D reconstruction with Deep Neural Radiance Fields (NeRF), and monocular depth estimation (ZoeDepth).
-    \item Experimented with alternative training methods, including Forward-Forward training and Predictive Coding algorithms, optimizing code for 3x performance improvement and enhanced scalability through efficient gradient computation.
+    \item Researched algorithms for Simultaneous Localization and Mapping (SLAM): attention-based graph feature matching (SuperGlue), 3D reconstruction via Neural Radiance Fields (NeRF), and monocular depth estimation (ZoeDepth).
+    \item Experimented with alternative training methods, including Forward-Forward training and Predictive Coding, optimizing code for 3x performance improvement and enhanced scalability through efficient gradient computation.
 \end{itemize}
 
 \vspace{4pt}
 
-\cventry{A.P. Moller - Maersk (APM Terminals)}{May 2022 -- Aug 2022}{Data Analytics and IT Intern}{Singapore}
+\cventry{A.P. Moller - Maersk}{May 2022 -- Aug 2022}{Data Analytics and IT Intern}{Singapore}
 \begin{itemize}
     \item Developed an Electronic Virtual Management System (EVMS) for APM Terminals, streamlining logistics, finances, operations, and risk management by collaborating with stakeholders to understand and address their requirements.
     \item Integrated 20+ databases enabling automated report generation, real-time dashboarding for enhanced visibility, and systematic tracking of operational KPIs.
@@ -162,25 +161,25 @@ Coursework: Advanced Micro \& Macro Economics, Econometrics, Game Theory \& Mech
 %-------------------------
 \section{Conferences and Publications}
 
-\textbf{Agrawal, N.} Crisis, Compassion, and Capital: The Economics of Global Charitable Giving. \textit{To be presented at the Singapore Economics Review Conference (SERC) 2026}, Singapore.\\
-{\small Do major crises create new charitable capital, or do they primarily reallocate existing donor attention? Using nearly 50,000 projects across 201 countries on GlobalGiving (2003–2025, totaling over \$575 million), we exploit the Russian invasion of Ukraine as a natural experiment. Difference-in-differences estimates reveal that Ukraine-related projects surged dramatically; approximately 60–70\% reflects genuine additionality (new donors entering the market) while 30–40\% reflects substitution from other causes. Within the disaster-response theme, non-Ukraine projects experienced a 40\% funding decline. Projects lacking emotionally salient or urgency-driven narratives are disproportionately crowded out as the attention environment shifts toward the dominant crisis narrative. Our findings establish that charitable markets are attention-constrained systems where crisis salience reshapes both the level and distribution of philanthropic capital.}
+\textbf{Agrawal, N.} (2026). Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications. \textit{IEEE Conference on Artificial Intelligence (CAI) 2026}, Granada, Spain.\\
+{\small Proposed complex-valued CNN architectures and training adaptations (complex batch-norm, weight initialization, complex activations) to exploit phase information ignored by real-valued nets. Evaluated in three stages: image baselines, MFCC audio classification, and phase-aware GNNs. Results show that complex architectures can match real CNNs while offering improved handling of phase in audio pipelines \& highlight trade-offs in stability versus expressivity across different complex activations.}
 
 \vspace{5pt}
 
-\textbf{Agrawal, N.} (2026). Phase-Aware Deep Learning with Complex-Valued CNNs for Audio Signal Applications. \textit{To be presented at the IEEE Conference on Artificial Intelligence (CAI) 2026}, Granada, Spain.\\
-{\small Proposed complex-valued CNN architectures and training adaptations (complex batch-norm, initialization, and various complex activations) to exploit phase information often ignored by real-valued nets; evaluated in three stages: image baselines, MFCC audio classification, and phase-aware GNNs. Results indicated complex architectures can match real CNN baselines while offering improved handling of phase in audio pipelines, with analysis of trade-offs in stability versus expressivity across different complex activation functions.}
+\textbf{Agrawal, N.} Crisis, Compassion, and Capital: The Economics of Global Charitable Giving. \textit{Presented at the Singapore Economics Review Conference (SERC) 2026}, Singapore.\\
+{\small Used the Russo-Ukraine war as a natural experiment and analyzed nearly 50,000 GlobalGiving projects across 201 countries to study whether major crises create new charitable capital or reallocate existing donor attention. DiD estimates show that 50-70\% of the surge in Ukraine-related giving reflects genuine additionality from new donors, while 30\% comes from substitution away from other causes, with emotionally less salient projects experiencing the largest crowding-out effects.}
 
 \vspace{5pt}
 
 \textbf{Agrawal, N.}, Shariffdeen, R., Wang, G., Rasnayaka, S., \& Iyer, G. N. (2025). Analysis of Student-LLM Interaction in a Software Engineering Project. \textit{IEEE/ACM International Workshop on Large Language Models for Code (LLM4Code), ICSE 2025}, Ottawa, Canada.\\
-{\small Tracked 126 undergraduate students over a 13-week semester and analyzed conversational logs, 730 LLM-generated code snippets, and code complexity metrics including lines of code, cyclomatic complexity, control flow graph depth, and Halstead effort. Demonstrated that conversational ChatGPT interactions produce shorter, lower-complexity code compared to Copilot, highlighting how dialogue-based prompting reduces code structural complexity while still meeting project requirements.}
+{\small Analyzed 13 weeks of student–LLM interaction, 730+ generated code snippets, and human intervention patterns to characterize how conversational interaction affects code generation quality and complexity. Results showed that interactive LLM use produced lower-complexity and higher-quality code than automated generation, identifying interaction design as an important determinant of LLM-assisted programming performance.}
 
 %-------------------------
 % SOFTWARES
 %-------------------------
 \section{Software}
 
-\textbf{Agrawal, N.} (2025). \texttt{covalchemy}: R Package for Constructing Joint Distributions with Control over Statistical Properties.\\
+\textbf{Agrawal, N.} (2025). \texttt{covalchemy}: R Package to Construct Joint Distributions with Control of Statistical Properties.\\
 {\small Provides tools for constructing multivariate distributions that preserve empirical marginals while allowing precise control over correlation structure, mutual information, and higher-order dependence. Benchmark experiments demonstrate that the methods maintain marginal fidelity with less than 1\% error while enabling precise manipulation of dependence structures for research applications and statistical pedagogy.}
 
 \vspace{5pt}
@@ -193,41 +192,51 @@ Coursework: Advanced Micro \& Macro Economics, Econometrics, Game Theory \& Mech
 %-------------------------
 \section{Working Papers}
 
-\textbf{Agrawal, N.} Equilibrium Analysis for Strategic Information Revelation in Data Markets.\\
-{\small Developed a tractable signalling model where data sellers choose how much of a dataset to disclose and buyers update beliefs accordingly. Derived conditions for pooling versus separating equilibria and used simulations to demonstrate how disclosure costs and prior beliefs shape market vulnerability to adverse selection. Highlighted policy implications, including standardized disclosure requirements, certification mechanisms, and third-party audits to improve allocation efficiency.}
+
+\textbf{Agrawal, N.} MOSAIC: Set-Based Multi-Bit Watermarking for Language Models.\\
+{\small Developed a novel set-based multi-bit watermarking framework that recovers embedded payloads from unordered token parity constraints using belief propagation. Demonstrated over 95\% exact payload recovery on Llama-2-7B for up to 32-bit messages while remaining robust to token reordering, insertion, and deletion without relying on model-specific decoding.}
 
 \vspace{5pt}
 
-\textbf{Agrawal, N.} Rigidity as a Signal: A Game-Theoretic Explanation for Persistent Vacancies in Urban Real Estate Markets.\\
-{\small Modeled vacancy as a deliberate, costly signal in a two-period game with heterogeneous sellers, deriving multiple equilibrium types including pooling-holdout, pooling-discount, and both separating forms. Analyzed comparative statics and demonstrated how targeted policy levers such as vacancy taxes and price-ratio mandates can reshape equilibria toward more informative outcomes and improve allocative efficiency in urban housing markets.}
+\textbf{Agrawal, N.} Equilibrium Analysis for Strategic Information Revelation in Data Markets.\\
+{\small Developed a tractable signalling model where data sellers choose how much of a dataset to disclose and buyers update beliefs accordingly. Derived conditions for pooling versus separating equilibria and used simulations to demonstrate how disclosure costs and prior beliefs shape market vulnerability to adverse selection. }
+
+\vspace{5pt}
+
+\textbf{Agrawal, N.} Crowding In or Crowding Out? Donor-Level Evidence on Private Charity and the Retreating State.\\
+{\small Used the 2025 U.S. federal government shutdown as a natural experiment and analyzed 32.6 million GoFundMe donations to study how private charity responds to government withdrawal. Showed that new donor entry more than offsets individual-level substitution, but overall replacement remains economically negligible and highly unequal, with funding concentrated in wealthier states and campaign success depending more on deservingness narratives than on described material need.}
+
+\vspace{5pt}
+
+
+\textbf{Agrawal, N.} The Revealed Value of a Rare Bird: Travel-Cost Valuation of Biodiversity from Vagrant Bird Sightings.\\
+{\small Developed a novel travel-cost framework using exogenous vagrant bird appearances and 13,271 eBird visits across India to estimate the recreational value of biodiversity. Identified the causal effect of rare species on birdwatching demand, recovering a revealed consumer surplus of approximately \$586 per rare-bird event. Distinguished participation from travel-distance responses and showed that rarity and novelty, rather than aesthetic appeal, drive recreational value.}
+
+\vspace{5pt}
+
+\textbf{Agrawal, N.} Rigidity as a Signal: A Game-Theoretic Explanation for Vacancies in Urban Real Estate Markets.\\
+{\small Modeled vacancy as a deliberate, costly signal in a two-period game with heterogeneous sellers, deriving multiple equilibrium types including pooling-holdout, pooling-discount, and separating forms. Analyzed comparative statics and demonstrated how targeted policy levers such as vacancy taxes and price-ratio mandates can reshape equilibria towards more informative outcomes and improve allocative efficiency in urban housing markets.}
 
 
 %-------------------------
 % WORK IN PROGRESS PAPERS
 %-------------------------
 \section{Work in Progress}
-
-\textbf{Agrawal, N.} Cultural Flows in the Digital Age: Evidence from YouTube’s Global Music Charts\\{}
+\textbf{Agrawal, N.} Cultural Flows in the Digital Age: Evidence from YouTube’s Global Music Charts.
 %{\small Analyzed 1.26 million weekly entries from YouTube Music's Top-100 charts across 60 countries (2021--2025) to map global music circulation patterns. Three stable listening blocs emerge from graph-based clustering: a cohesive Latin American community, a broad global mainstream cluster linking Europe and Asian markets, and a distinct East African group. Bilateral similarity regressions confirm that shared language is the single strongest predictor of musical affinity, followed by geographic and cultural proximity. Diffusion networks reveal asymmetric export patterns with the United States as the central hub and Mexico as the pivotal conduit for Spanish-language content diffusion.}
 
-\textbf{Agrawal, N.} Seventy-Five Years of the Supreme Court of
-India: An Empirical Analysis of Judicial Decision-Making,
-Citation Networks and Institutional
-Evolution\\{}
+\vspace{5pt}
+
+\textbf{Agrawal, N.} The Evolution of the Supreme Court of India: Judicial Decision-Making, Citation Networks, and Institutional Change.
 %{\small Constructed a novel dataset of 42,833 judgments with structured metadata extracted using large language models, covering party characteristics, legal doctrines, constitutional provisions, precedent citations, bench composition, and case outcomes. Estimated determinants of appellant success using OLS, logit, probit, and high-dimensional fixed effects, with causal identification through IV, RDD, and DiD designs. Mapped citation networks to identify the 50 most influential precedents and detect doctrinal communities through Louvain clustering.}
 
-
-\textbf{Agrawal, N.}, \& Gopal, V. Copula-Based Approaches to Engineering Simpson's Paradox and Applications to Fairness Evaluation.\\{}
-%{\small Presented a reproducible copula-based pipeline using quantile inverse-CDF mapping, targeted copula dependence, assignment optimization, and simulated annealing to create tunable Simpson's paradox datasets for algorithmic fairness benchmarking. Demonstrated that pooled estimators can mask severe subgroup failures, making the method a practical testbed for fairness diagnostics; implementation available in the \texttt{covalchemy} R package.}
-
-\vspace{-5pt}
 
 %-------------------------
 % PROFESSIONAL SERVICE
 %-------------------------
 \section{Professional Service}
 
-\textbf{Referee:} IEEE Conference on Artificial Intelligence (IEEE CAI) 2026
+\textbf{Referee:} IEEE Conference on Artificial Intelligence (IEEE CAI) 2026.
 
 %-------------------------
 % TEACHING
@@ -236,41 +245,41 @@ Evolution\\{}
 
 \cventry{Department of Computer Science \& Economics, NUS}{Jul 2022 -- Jul 2025}{Undergraduate Teaching Assistant}{Singapore}
 
-Design and Analysis of Algorithms (CS3230), Data Structures and Algorithms (CS2040), Computational Media Literacy (NM2207), Data Visualization (DSA2101), Programming Methodology (CS1010S), Macroeconomics (EC2102), Artificial Intelligence: Technology and Society (IT1244), Introduction to Data Science (DSA1101). 
+Design and Analysis of Algorithms (CS3230), Data Structures and Algorithms (CS2040), Artificial Intelligence: Technology and Society (IT1244), Programming Methodology (CS1010S), Computational Media Literacy (NM2207), Data Visualization (DSA2101), Introduction to Data Science (DSA1101), Macroeconomics (EC2102).
 
 
 %-------------------------
 % PROJECTS
 %-------------------------
-\section{Selected Projects}
+% \section{Selected Projects}
 
-\cvsubentry{Generative AI for Traffic}{NCS Innovation Challenge Finalists}\\
-Developed TrafficAI, an AI-powered traffic control centre utilizing Flask API and Gemini to analyze over 1 million daily data points from real-time sensors, traffic cameras, GPS, and social media. Implemented a comprehensive urban mobility approach with an active response system for accidents and disruptions.
+% \cvsubentry{Generative AI for Traffic}{NCS Innovation Challenge Finalists}\\
+% Developed TrafficAI, an AI-powered traffic control centre utilizing Flask API and Gemini to analyze over 1 million daily data points from real-time sensors, traffic cameras, GPS, and social media. Implemented a comprehensive urban mobility approach with an active response system for accidents and disruptions.
 
-\vspace{4pt}
+% \vspace{4pt}
 
-\cvsubentry{OptPark: NUS Car Park Optimization Software}{}\\
-Created parking optimization application using R Shiny, advanced discrete event simulation techniques, and statistical modeling. Spearheaded backend development, frontend UI integration, Dockerization, and AWS deployment for real-time management of 7 university car parks.
+% \cvsubentry{OptPark: NUS Car Park Optimization Software}{}\\
+% Created parking optimization application using R Shiny, advanced discrete event simulation techniques, and statistical modeling. Spearheaded backend development, frontend UI integration, Dockerization, and AWS deployment for real-time management of 7 university car parks.
 
-\vspace{4pt}
+% \vspace{4pt}
 
-\cvsubentry{Grab-Posisi Geospatial Analysis}{}\\
-Analyzed the Grab-Posisi dataset with 80 million GPS pings using Geopandas and Folium. Performed targeted speed analysis to identify traffic bottlenecks and investigated the influence of taxi stands, HDB construction sites, and parking zones on traffic flow.
+% \cvsubentry{Grab-Posisi Geospatial Analysis}{}\\
+% Analyzed the Grab-Posisi dataset with 80 million GPS pings using Geopandas and Folium. Performed targeted speed analysis to identify traffic bottlenecks and investigated the influence of taxi stands, HDB construction sites, and parking zones on traffic flow.
 
-\vspace{4pt}
+% \vspace{4pt}
 
-\cvsubentry{Adapting Yield Curves for Negative Interest Rate Regimes}{}\\
-Conducted an empirical study using 20+ years of daily government bond yield data from the Eurozone and Japan to evaluate Nelson-Siegel-Svensson and cubic spline models under negative interest rate regimes. Performed robustness checks using out-of-sample forecasting and bootstrapping.
+% \cvsubentry{Adapting Yield Curves for Negative Interest Rate Regimes}{}\\
+% Conducted an empirical study using 20+ years of daily government bond yield data from the Eurozone and Japan to evaluate Nelson-Siegel-Svensson and cubic spline models under negative interest rate regimes. Performed robustness checks using out-of-sample forecasting and bootstrapping.
 
 %-------------------------
 % SKILLS
 %-------------------------
-\section{Technical Skills}
+% \section{Technical Skills}
 
-\textbf{Programming:} Python, R, Stata, SQL, Java, JavaScript, C++\\
-\textbf{ML/Statistics:} TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers\\
-\textbf{Visualization:} ggplot2, seaborn, Plotly, Power BI, Tableau, Shiny\\
-\textbf{Tools:} Git, Docker, \LaTeX, FastAPI, Flask, Streamlit, React, Jupyter, Quarto, MATLAB
+% \textbf{Programming:} Python, R, Stata, SQL, Java, JavaScript, C++\\
+% \textbf{ML/Statistics:} TensorFlow, PyTorch, Scikit-learn, Hugging Face Transformers\\
+% \textbf{Visualization:} ggplot2, seaborn, Plotly, Power BI, Tableau, Shiny\\
+% \textbf{Tools:} Git, Docker, \LaTeX, FastAPI, Flask, Streamlit, React, Jupyter, Quarto, MATLAB
 
 %-------------------------
 % AWARDS
@@ -297,23 +306,24 @@ National Economics Olympiad (SRCC): All India Rank 2 & 2020 \\
 %-------------------------
 \section{Selected Activities}
 
-\textbf{Leadership:} PGP Residence Cluster Leader; NUS Data Science Society (Blockchain Research); NUS Math Society (LaTeX Director); NUS Economics Case Competition (Research Executive); NUS Economics Camp (Publicity Executive)
+\textbf{Volunteering:} Autism Resource Centre (Google Data Analytics Mentor, 2022), NUS Community \& Social Service Club (Art
+Volunteer for Project HeART, 2022), Sembawang Family Service Centre (Python Tutor, 2022), Centre for Computing for Social Good (AI Primer Tutor, 2022), Anmol Society (English Teacher, 2019-2020).
 
 \vspace{3pt}
 
-\textbf{Writing:} Published 25+ articles with 100,000+ reads in Towards Data Science and Analytics Vidhya on probability theory, deep learning, and statistical analysis
+\textbf{Leadership:} PGP Residence (Cluster Leader), NUS Data Science Society (Research Director), NUS Math Society (\LaTeX, Director), NUS Economics Case Comp (Research Executive), NUS Economics Camp (Publicity Executive).
 
 \vspace{3pt}
 
-\textbf{Competitions:} Advent of Code (2023--24), NUS Hack \& Roll (2024), IMC Prosperity Algorithmic Trading (2024), SMU Future Economic Forum (2023--24), Citadel APAC Datathon (2022)
+\textbf{Writing:} Published 25+ articles with 100,000+ reads in Towards Data Science and Analytics Vidhya on probability theory, deep learning, and statistical analysis.
 
 \vspace{3pt}
 
-\textbf{Workshops Organized:} Generative AI for Business, Computer Vision with OpenCV, Network Analysis with tidygraph (R User Conference), Introductory \& Advanced \LaTeX, NUS SoC Summer Workshops
+\textbf{Competitions:} Advent of Code (2023--24), NUS Hack \& Roll (2024), IMC Prosperity Algorithmic Trading (2024), SMU Future Economic Forum (2023--24), Citadel APAC Datathon (2022).
 
 \vspace{3pt}
 
-\textbf{Volunteering:} Autism Resource Centre (Data Analytics Mentor), Sembawang Family Service Centre (Python Tutor), Centre for Computing for Social Good (AI Primer Tutor), Anmol Society (English Teacher, 2019--20)
+\textbf{Workshops Organized:} Generative AI for Business, Computer Vision with OpenCV, Network Analysis with tidygraph (R User Conference), Introductory \& Advanced \LaTeX, NUS SoC Summer Workshops.
 
 \vspace{8pt}
 \begin{center}
